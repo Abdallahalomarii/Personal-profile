@@ -2,27 +2,32 @@
     --color1: #d6d6d6;
     --color2: #d9d9da;
     --color3: #dadada;
-    --dark:#222;
+    --dark: #222;
     --blue: #4c4974;
-    --bg-blue :#22223b;
+    --bg-blue: #22223b;
 }
 
-*,*::before,*::after{
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
- 
+
 }
-html,body {
+
+html,
+body {
 
     font-family: 'Open Sans', sans-serif;
     font-family: 'Rubik', sans-serif;
 
 }
+
 #navbar {
     display: flex;
     justify-content: flex-end;
-    background: linear-gradient(var(--color3),var(--color2),var(--color1));
+    background: linear-gradient(var(--color3), var(--color2), var(--color1));
     border-bottom: 3px solid var(--bg-blue);
     z-index: 999;
     transition: .5s ease;
@@ -62,9 +67,10 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(var(--bg-blue),var(--blue));
+    background: linear-gradient(var(--bg-blue), var(--blue));
     color: #e0e1dd;
-    
+
+
 
 }
 
@@ -78,7 +84,7 @@ nav ul li a:hover {
     font-size: 1.5rem;
     color: #f35b04;
     text-transform: capitalize;
-}
+   }
 #projects {
     min-height: 100vh;
     width: 100%;
@@ -91,25 +97,27 @@ nav ul li a:hover {
     padding: 2rem;
     box-sizing: border-box;
 }
+
 #projects h1 {
     font-size: 2.3rem;
     margin-top: 4rem;
     margin-bottom: 2rem;
 
 }
+
 .projects-grid {
     height: 100%;
     display: grid;
-   grid-template-columns: 1fr 1fr;
-   justify-items: center;
-   align-items: center;
-   gap: 2rem;
-   padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
 
 }
 
 .project-tile {
-    height:500px;
+    height: 500px;
     width: 500px;
     margin: 1rem;
     color: #e0e1dd;
@@ -118,6 +126,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
 }
+
 .project-tile a {
     height: inherit;
     object-fit: cover;
@@ -127,69 +136,79 @@ nav ul li a:hover {
     align-items: center;
     text-decoration: none;
     background-color: #22223b;
-    border-radius: 5px;
     transition: 0.5s all ease;
-
+    border-radius: 10px;
 }
-.project-tile a >p {
+
+.project-tile a>p {
     color: var(--color2);
     font-size: 1.3rem;
     text-transform: capitalize;
     padding: 1rem;
     text-align: center;
-    
+
 }
+
 .code {
     color: #22223b;
-    transition: color 0.5s ease;    
+    transition: color 0.5s ease;
 }
-.project-card:hover .code{
+
+.project-card:hover .code {
     transition: 0.5s ease;
     color: #f35b04;
 }
+
 .project-image {
     width: 100%;
     height: calc(100% - 3.5rem);
     object-fit: cover;
-    border-radius: 5px;
-}
-img {
-    display: block;
-    width: 100%;
+    border-radius: 10px 10px 0 0;
+
 }
 
-#contact { 
+img {
+    display: flex;
+    width: 50%;
+}
+
+#contact {
     height: 100vh;
-    background: linear-gradient(#262731,var(--blue));
+    background: linear-gradient(#262731, var(--blue));
     color: #e0e1dd;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    
+
 }
-#contact h1 { 
+
+#contact h1 {
     font-size: 3rem;
     text-align: center;
     margin-bottom: 2rem;
 
 
 }
-.social { 
+
+.social {
     display: flex;
 
 }
-.social a{
+
+.social a {
     text-decoration: none;
     color: var(--color2);
     margin: 1rem;
     font-size: 1.5rem;
 }
+
 .social a:hover {
-    transition: 0.3s  all ease-in-out;
+    transition: 0.3s all ease-in-out;
     transform: translateY(1rem);
 }
+
 footer {
     height: 5rem;
     width: 100%;
@@ -198,41 +217,51 @@ footer {
     justify-content: center;
     align-items: center;
 }
-footer > h1{
+
+footer>h1 {
     text-align: center;
     text-transform: capitalize;
     color: rgb(54, 51, 51);
 }
+
 @media (max-width:1200px) {
-    .projects-grid{
+    .projects-grid {
         grid-template-columns: 0fr;
     }
+
     .project-tile {
         width: 200%;
     }
 }
+
 @media (max-width:520px) {
-    body{
+    body {
         overflow-x: hidden;
 
     }
+
     .project-tile {
         width: 400px;
     }
+
     #welcome-section h1 {
         font-size: 2rem;
     }
+
     nav ul li {
         font-size: 1.0rem;
     }
+
     .social {
         display: flex;
         flex-direction: column;
     }
-    .social a{
+
+    .social a {
         font-size: 1.3rem;
     }
-    .social a:hover{
+
+    .social a:hover {
         transform: translateX(1rem);
     }
 }
