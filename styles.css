@@ -1,0 +1,238 @@
+:root {
+    --color1: #d6d6d6;
+    --color2: #d9d9da;
+    --color3: #dadada;
+    --dark:#222;
+    --blue: #4c4974;
+    --bg-blue :#22223b;
+}
+
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ 
+}
+html,body {
+
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
+
+}
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(var(--color3),var(--color2),var(--color1));
+    border-bottom: 3px solid var(--bg-blue);
+    z-index: 999;
+    transition: .5s ease;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 3rem;
+}
+
+nav ul li {
+    list-style: none;
+    line-height: 3.5;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+nav ul li a {
+    display: flex;
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--dark);
+}
+
+nav ul li a:hover {
+    color: var(--color2);
+    background-color: var(--blue);
+}
+
+#welcome-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--bg-blue),var(--blue));
+    color: #e0e1dd;
+    
+
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+#welcome-section p {
+    font-size: 1.5rem;
+    color: #f35b04;
+    text-transform: capitalize;
+}
+#projects {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(var(--blue), #262731);
+    color: #e0e1dd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+#projects h1 {
+    font-size: 2.3rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+
+}
+.projects-grid {
+    height: 100%;
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+   justify-items: center;
+   align-items: center;
+   gap: 2rem;
+   padding: 2rem;
+
+}
+
+.project-tile {
+    height:500px;
+    width: 500px;
+    margin: 1rem;
+    color: #e0e1dd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.project-tile a {
+    height: inherit;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+    background-color: #22223b;
+    border-radius: 5px;
+    transition: 0.5s all ease;
+
+}
+.project-tile a >p {
+    color: var(--color2);
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    padding: 1rem;
+    text-align: center;
+    
+}
+.code {
+    color: #22223b;
+    transition: color 0.5s ease;    
+}
+.project-card:hover .code{
+    transition: 0.5s ease;
+    color: #f35b04;
+}
+.project-image {
+    width: 100%;
+    height: calc(100% - 3.5rem);
+    object-fit: cover;
+    border-radius: 5px;
+}
+img {
+    display: block;
+    width: 100%;
+}
+
+#contact { 
+    height: 100vh;
+    background: linear-gradient(#262731,var(--blue));
+    color: #e0e1dd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+#contact h1 { 
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+
+
+}
+.social { 
+    display: flex;
+
+}
+.social a{
+    text-decoration: none;
+    color: var(--color2);
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+.social a:hover {
+    transition: 0.3s  all ease-in-out;
+    transform: translateY(1rem);
+}
+footer {
+    height: 5rem;
+    width: 100%;
+    background: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer > h1{
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(54, 51, 51);
+}
+@media (max-width:1200px) {
+    .projects-grid{
+        grid-template-columns: 0fr;
+    }
+    .project-tile {
+        width: 200%;
+    }
+}
+@media (max-width:520px) {
+    body{
+        overflow-x: hidden;
+
+    }
+    .project-tile {
+        width: 400px;
+    }
+    #welcome-section h1 {
+        font-size: 2rem;
+    }
+    nav ul li {
+        font-size: 1.0rem;
+    }
+    .social {
+        display: flex;
+        flex-direction: column;
+    }
+    .social a{
+        font-size: 1.3rem;
+    }
+    .social a:hover{
+        transform: translateX(1rem);
+    }
+}
